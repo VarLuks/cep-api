@@ -55,16 +55,27 @@ public class RolController {
     @PostMapping("")
     public ResponseEntity<Object> post(@RequestBody String value) throws JsonProcessingException {
         JsonNode node = mapper.readTree(value);
-        Rol nuevoRol = new Rol();
-        nuevoRol.setDescription(node.get("description").asText());
+        Rol newRol = new Rol();
+        newRol.setDescription(node.get("description").asText());
         try {
-            rolService.addNewRol(nuevoRol);
+            rolService.addNewRol(newRol);
             return ResponseEntity.ok(Map.of("Nuevo rol agregado:", node));
         } catch (Exception e) {
             System.out.println(e.getMessage());
             return ResponseEntity.status(400).body(Map.of("Error", e.getMessage()));
         }
+    }
 
-
+    @DeleteMapping("")
+    public ResponseEntity<Object> delete(@RequestBody String id) throws JsonProcessingException {
+        JsonNode node = mapper.readTree(id);
+        Long idDelete = node.get("id").asLong();
+        try {
+            rolService.DeleteRol(idDelete);
+            return ResponseEntity.ok(Map.of("Rol Eliminado:", rolService.getById(idDelete)));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return ResponseEntity.status(400).body(Map.of("Error", e.getMessage()));
+        }
     }
 }

@@ -35,8 +35,14 @@ public class RolService {
         return RolMapper.toRolResponse(rol.get());
     }
     @Transactional
-    public RolResponse addNewRol(Rol nuevoRol) {
-        Optional<Rol> rol = Optional.of(rolRepository.save(nuevoRol));
+    public RolResponse addNewRol(Rol newRol) {
+        Optional<Rol> rol = Optional.of(rolRepository.save(newRol));
+        return RolMapper.toRolResponse(rol.get());
+    }
+    @Transactional
+    public RolResponse DeleteRol (Long idDelete) {
+        Optional<Rol> rol = rolRepository.findById(idDelete);
+        rol.get().set_active(false);
         return RolMapper.toRolResponse(rol.get());
     }
 }

@@ -28,4 +28,6 @@ public class Rol {
     @Column(nullable = false)
     @UpdateTimestamp
     private Date modified_at;
+    @Column(nullable = false)
+    private boolean is_active = true;
 }
