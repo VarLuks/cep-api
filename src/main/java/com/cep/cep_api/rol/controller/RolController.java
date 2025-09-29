@@ -1,12 +1,10 @@
-package com.cep.cep_api.controller;
+package com.cep.cep_api.rol.controller;
 
-import com.cep.cep_api.domain.Rol;
-import com.cep.cep_api.dto.RolResponse;
-import com.cep.cep_api.service.RolService;
+import com.cep.cep_api.rol.domain.Rol;
+import com.cep.cep_api.rol.service.RolService;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

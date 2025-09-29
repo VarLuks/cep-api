@@ -1,6 +1,6 @@
-package com.cep.cep_api.dto;
+package com.cep.cep_api.rol.dto;
 
-import com.cep.cep_api.domain.Rol;
+import com.cep.cep_api.rol.domain.Rol;
 import com.fasterxml.jackson.core.JsonProcessingException;
 
 import java.util.ArrayList;

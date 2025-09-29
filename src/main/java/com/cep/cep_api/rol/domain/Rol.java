@@ -1,4 +1,4 @@
-package com.cep.cep_api.domain;
+package com.cep.cep_api.rol.domain;
 /*Siempre las clases al inicio en mayus*/
 
 import jakarta.persistence.*;
@@ -6,9 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.springframework.data.annotation.CreatedDate;
-import org.springframework.data.annotation.LastModifiedBy;
-import org.springframework.data.annotation.LastModifiedDate;
+
 
 import java.util.Date;
 

@@ -1,8 +1,12 @@
-package com.cep.cep_api.service;
+package com.cep.cep_api.rol.service;
 
-import com.cep.cep_api.domain.Rol;
-import com.cep.cep_api.dto.*;
-import com.cep.cep_api.repository.RolRepository;
+import com.cep.cep_api.rol.domain.Rol;
+import com.cep.cep_api.rol.dto.*;
+import com.cep.cep_api.rol.dto.RolListMapper;
+import com.cep.cep_api.rol.dto.RolListResponse;
+import com.cep.cep_api.rol.dto.RolMapper;
+import com.cep.cep_api.rol.dto.RolResponse;
+import com.cep.cep_api.rol.repository.RolRepository;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
